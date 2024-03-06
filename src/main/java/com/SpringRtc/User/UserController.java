@@ -2,6 +2,7 @@ package com.SpringRtc.User;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,7 @@ import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 @CrossOrigin("*")
 @Slf4j
 public class UserController {
+    @Autowired
 private   UserSerivce serivce;
 
 
@@ -27,7 +29,7 @@ private   UserSerivce serivce;
        serivce.register(user);
     }
     @PostMapping("/login")
-    public User login(User user){
+    public User login(@RequestBody  User user){
 
         return serivce.login(user);
     }

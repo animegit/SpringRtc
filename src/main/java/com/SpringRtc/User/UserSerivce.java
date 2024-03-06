@@ -16,6 +16,7 @@ user.setStatus("ONLINE");
         userlist.add(user);
     }
     public User login(User user){
+
         var index= IntStream.range(0, userlist.size()).filter(i -> userlist.get(i).getEmail().equals(user.getEmail())).findAny().orElseThrow(()->new RuntimeException("User Not found"));
      var cuser=userlist.get(index);
      if(!cuser.getPassword().equals(user.getPassword())){

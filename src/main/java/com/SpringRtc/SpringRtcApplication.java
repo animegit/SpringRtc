@@ -17,8 +17,10 @@
 		@Bean
 		public CommandLineRunner commandLineRunner(UserSerivce service) {
 			return args -> {
-				User user = new User("Animesh", "Animesh@mail.com", "aaa", "online");
-				service.register(user);
+				User u1 = new User("Animesh", "Animesh@mail.com", "aaa", "online");
+				service.register(u1);
+				User u2 = new User("xyz", "Aim@mail.com", "aaa", "online");
+				service.register(u2);
 			};
 		}
 	}
