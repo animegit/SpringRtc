@@ -24,8 +24,8 @@ private   UserSerivce serivce;
 
 
 
-    @PostMapping()
-    public void register(User user){
+    @PostMapping("/register")
+    public void register(@RequestBody User user){
        serivce.register(user);
     }
     @PostMapping("/login")
@@ -35,7 +35,7 @@ private   UserSerivce serivce;
     }
     @PostMapping("/logout")
 
-    public void logout(String email){
+    public void logout(@RequestBody  String email){
         serivce.logout(email);
 
 

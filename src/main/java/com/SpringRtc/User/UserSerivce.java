@@ -12,6 +12,7 @@ public class UserSerivce {
 
 
     public void register(User user){
+
 user.setStatus("ONLINE");
         userlist.add(user);
     }
