@@ -75,7 +75,7 @@ const newMeetingBtn = document.getElementById("newMeetingBtn");
 newMeetingBtn.addEventListener("click", handleNewMeeting);
 
 
-function handleJoinMeeting() {
+function JoinMeeting() {
     const roomId = document.getElementById("meetingName").value;
     const connectedUser = JSON.parse(localStorage.getItem('connectedUser'));
 
@@ -85,4 +85,4 @@ function handleJoinMeeting() {
 }
 
 const joinMeetingBtn = document.getElementById("joinMeetingBtn");
-joinMeetingBtn.addEventListener("click", handleJoinMeeting);
+joinMeetingBtn.addEventListener("click", JoinMeeting);
