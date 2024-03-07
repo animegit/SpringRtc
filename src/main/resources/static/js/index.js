@@ -70,7 +70,7 @@ function handleNewMeeting() {
     window.open(`videocall.html?username=${connectedUser.username}`, "_blank");
 }
 
-// Attach the handleNewMeeting function to the "Create a New Meeting" button
+
 const newMeetingBtn = document.getElementById("newMeetingBtn");
 newMeetingBtn.addEventListener("click", handleNewMeeting);
 
